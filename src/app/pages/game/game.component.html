@@ -1,0 +1,14 @@
+<div class="canvas mx-auto" [ngStyle]="{ backgroundImage: 'url(assets/background.jpg)' }">
+  <app-game-item *ngFor="let options of gameItems; trackBy: trackByFn" [gameItemData]="options"></app-game-item>
+</div>
+
+<div class="text-center mt-3">
+  <h2>
+  <span *ngFor="let life of lifeService.lifesArray">
+    <ng-container *ngIf="life">❤</ng-container>
+  </span>
+  </h2>
+  <h2>Score: {{ currentScore }}</h2>
+
+  <button class="mt-4" (click)="cancelGame()">Cancel</button>
+</div>

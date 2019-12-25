@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GameState, NavigationService } from './services/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'xmas-game';
+  gameState = GameState;
+
+  constructor(public navigationService: NavigationService) {
+  }
 }

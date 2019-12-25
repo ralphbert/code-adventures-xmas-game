@@ -1,0 +1,27 @@
+.game-item {
+  display: block;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.10s;
+
+  &.clicked {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
